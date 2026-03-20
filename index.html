@@ -3,121 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OM Telecom | Mobile Shop</title>
+<title>OM Telecom | Mobile Repair & Sales</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#f4f6f9;}
-header {background:linear-gradient(45deg,#0d47a1,#1976d2);color:white;text-align:center;padding:25px;}
-nav {background:#1565c0;padding:10px;text-align:center;}
-nav a {color:white;margin:10px;text-decoration:none;font-weight:bold;}
+body {margin:0;font-family:'Segoe UI',sans-serif;background:#f5f7fb;}
 
-section {padding:30px;}
-.card {background:white;padding:20px;margin:15px 0;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+/* HERO SECTION */
+.hero {
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+.hero h1 {font-size:40px;}
+.hero p {font-size:18px;}
+.btn {
+    background:#ff9800;
+    padding:12px 20px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    text-decoration:none;
+}
 
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+/* NAV */
+nav {
+    background:#1565c0;
+    padding:12px;
+    text-align:center;
+}
+nav a {
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-.btn {background:#ff9800;color:white;padding:10px;border:none;border-radius:5px;text-decoration:none;cursor:pointer;}
+/* SECTION */
+section {padding:50px 20px;text-align:center;}
 
-input,textarea {width:100%;padding:10px;margin:8px 0;border-radius:5px;border:1px solid #ccc;}
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-.gallery img {width:100%;border-radius:10px;}
+/* CARD */
+.card {
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.card:hover {
+    transform:translateY(-10px);
+}
 
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;}
+/* ICON */
+.icon {
+    font-size:40px;
+    margin-bottom:10px;
+}
 
-footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
+/* GALLERY */
+.gallery img {
+    width:100%;
+    border-radius:10px;
+}
+
+/* CONTACT */
+.contact {
+    background:#0d47a1;
+    color:white;
+    padding:40px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+}
+
+/* FOOTER */
+footer {
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
 </style>
+
 </head>
 
 <body>
 
-<header>
-<h1>OM Telecom</h1>
-<p>Raghunathpur, Godda, Jharkhand</p>
-<p>Mobile Sales | Repair | CSC Services</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+    <h1>OM Telecom</h1>
+    <p>Mobile Sales & Repair in Raghunathpur, Godda</p>
+    <a class="btn" href="#contact">Contact Now</a>
+</div>
 
+<!-- NAV -->
 <nav>
 <a href="#services">Services</a>
 <a href="#gallery">Mobiles</a>
-<a href="#booking">Repair</a>
-<a href="#payment">Payment</a>
-<a href="#reviews">Reviews</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
 <div class="grid">
-<div class="card">📱 New & Old Mobile Sales</div>
-<div class="card">🔧 Repair & Replacement</div>
-<div class="card">💻 Software Service</div>
-<div class="card">📶 SIM Card Sale</div>
-<div class="card">🌐 CSC Online Services</div>
+<div class="card">
+<div class="icon">📱</div>
+<h3>Mobile Sales</h3>
+<p>New & old mobile phones available at best price.</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Repair & Replacement</h3>
+<p>Screen, battery, motherboard repair.</p>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Software Service</h3>
+<p>Flashing, unlock, updates.</p>
+</div>
+
+<div class="card">
+<div class="icon">📶</div>
+<h3>SIM Services</h3>
+<p>All SIM cards available.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>CSC Services</h3>
+<p>Online forms, Aadhaar & more.</p>
+</div>
 </div>
 </section>
 
+<!-- GALLERY -->
 <section id="gallery">
-<h2>Available Mobiles</h2>
+<h2>Popular Mobiles</h2>
 <div class="grid gallery">
-<img src="https://via.placeholder.com/300x200?text=iPhone">
-<img src="https://via.placeholder.com/300x200?text=Samsung">
-<img src="https://via.placeholder.com/300x200?text=Realme">
-<img src="https://via.placeholder.com/300x200?text=Redmi">
+<img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5">
+<img src="https://images.unsplash.com/photo-1512499617640-c2f999098c01">
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
 </div>
 </section>
 
-<section id="booking">
-<h2>Book Repair (Instant WhatsApp)</h2>
-<div class="card">
-<input type="text" id="name" placeholder="Your Name">
-<input type="text" id="phone" placeholder="Phone">
-<textarea id="issue" placeholder="Describe issue"></textarea>
-<button class="btn" onclick="sendWhatsApp()">Submit</button>
+<!-- ABOUT -->
+<section id="about">
+<h2>Why Choose Us</h2>
+<div class="grid">
+<div class="card">✔ Trusted Local Shop</div>
+<div class="card">✔ Fast Repair Service</div>
+<div class="card">✔ Affordable Price</div>
+<div class="card">✔ Expert Technician</div>
 </div>
 </section>
 
-<section id="payment">
-<h2>Pay Online (UPI)</h2>
-<div class="card">
-<p>Scan & Pay using UPI</p>
-<img src="https://via.placeholder.com/200?text=UPI+QR">
-<br><br>
-<a class="btn" href="upi://pay?pa=yourupi@upi&pn=OM%20Telecom">Pay Now</a>
-</div>
-</section>
-
-<section id="reviews">
-<h2>Customer Reviews</h2>
-<div class="card">⭐️⭐️⭐️⭐️⭐️ Excellent service!</div>
-<div class="card">⭐️⭐️⭐️⭐️ Good repair quality</div>
-<div class="card">⭐️⭐️⭐️⭐️⭐️ Fast service</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
+<!-- CONTACT -->
+<div class="contact" id="contact">
+<h2>Contact Us</h2>
 <p>📍 Raghunathpur, Godda, Jharkhand</p>
 <p>📞 +91 9000000000</p>
-<iframe src="https://maps.google.com/maps?q=godda&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="200"></iframe>
-</div>
-</section>
+<p>🕒 Open Daily 9 AM - 9 PM</p>
 
-<a class="whatsapp" href="https://wa.me/919000000000" target="_blank">💬</a>
+<iframe src="https://maps.google.com/maps?q=godda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="250" style="border:0;margin-top:20px;"></iframe>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919000000000">💬</a>
 
 <footer>
-<p>© 2026 OM Telecom</p>
+<p>© 2026 OM Telecom | All Rights Reserved</p>
 </footer>
-
-<script>
-function sendWhatsApp(){
-let name=document.getElementById("name").value;
-let phone=document.getElementById("phone").value;
-let issue=document.getElementById("issue").value;
-
-let msg=`Name: ${name}%0APhone: ${phone}%0AIssue: ${issue}`;
-window.open(`https://wa.me/919000000000?text=${msg}`);
-}
-</script>
 
 </body>
 </html>
