@@ -3,38 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OM Telecom | Mobile Repair & Sales</title>
+<title>OM Telecom | Mobile Repair in Godda</title>
+
+<meta name="description" content="Best mobile repair and sales shop in Raghunathpur Godda Jharkhand. Fast service, best price, CSC services available.">
 
 <style>
-body {margin:0;font-family:'Segoe UI',sans-serif;background:#f5f7fb;}
+body {margin:0;font-family:Arial;background:#f4f6f9;}
 
-/* HERO SECTION */
 .hero {
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9');
-    background-size:cover;
-    background-position:center;
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-.hero h1 {font-size:40px;}
-.hero p {font-size:18px;}
-.btn {
-    background:#ff9800;
-    padding:12px 20px;
-    color:white;
-    border:none;
-    border-radius:5px;
-    text-decoration:none;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9');
+background-size:cover;
+color:white;text-align:center;padding:100px 20px;
 }
 
-/* NAV */
-nav {
-    background:#1565c0;
-    padding:12px;
-    text-align:center;
+.btn {background:#ff9800;color:white;padding:12px 20px;border-radius:5px;text-decoration:none;}
+
+nav {background:#1565c0;padding:10px;text-align:center;}
+nav a {color:white;margin:10px;text-decoration:none;font-weight:bold;}
+
+section {padding:40px;text-align:center;}
+
+.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+
+.card {background:white;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+
+.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;}
+
+footer {background:#0d47a1;color:white;text-align:center;padding:15px;}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>OM Telecom</h1>
+<p>Mobile Repair & Sales in Godda</p>
+<a class="btn" href="tel:+919000000000">Call Now</a>
+</div>
+
+<!-- NAV -->
+<nav>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid">
+<div class="card">📱 Mobile Sales (New & Old)</div>
+<div class="card">🔧 Screen Replacement</div>
+<div class="card">🔋 Battery Replacement</div>
+<div class="card">💻 Software Repair</div>
+<div class="card">📶 SIM Card Services</div>
+<div class="card">🌐 CSC Online Services</div>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+<h2>Popular Services & Price</h2>
+<div class="grid">
+<div class="card">Screen Replacement - ₹799 onwards</div>
+<div class="card">Battery Change - ₹499 onwards</div>
+<div class="card">Software Flash - ₹299</div>
+</div>
+</section>
+
+<!-- WHATSAPP BOOKING -->
+<section>
+<h2>Instant Booking</h2>
+<div class="card">
+<input id="name" placeholder="Your Name"><br><br>
+<input id="phone" placeholder="Phone"><br><br>
+<button class="btn" onclick="wa()">Book on WhatsApp</button>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+<h2>Customer Reviews</h2>
+<div class="card">⭐️⭐️⭐️⭐️⭐️ Best shop in Godda!</div>
+<div class="card">⭐️⭐️⭐️⭐️ Fast repair</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<div class="card">
+<p>📍 Raghunathpur, Godda, Jharkhand</p>
+<p>📞 +91 8002926291</p>
+
+<iframe src="https://maps.google.com/maps?q=godda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="200"></iframe>
+</div>
+</section>
+
+<!-- FLOAT BUTTON -->
+<a class="whatsapp" href="https://wa.me/918002926291">💬</a>
+
+<footer>
+<p>© OM Telecom | Mobile Repair Shop in Godda</p>
+</footer>
+
+<script>
+function wa(){
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+
+let msg=`New Customer:%0AName:${name}%0APhone:${phone}`;
+window.open(`https://wa.me/918002926291?text=${msg}`);
 }
+</script>
+
+</body>
+</html>}
 nav a {
     color:white;
     margin:15px;
