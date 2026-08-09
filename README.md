@@ -4,7 +4,7 @@ OM Telecom is a local **mobile store and digital service centre** in **Raghunath
 
 ## 🌐 Website
 
-**Live site:** [OM Telecom](https://abhijarvis.github.io/Om-telecom/)
+**Live site:** [OM Telecom]
 
 ## 🎯 Our 5 Core Services
 
@@ -20,12 +20,12 @@ OM Telecom is a local **mobile store and digital service centre** in **Raghunath
 Main Road, Raghunathpur  
 Godda, Jharkhand – 814133
 
-[View OM Telecom on Google Maps](https://www.google.com/maps/search/?api=1&query=OM+Telecom+Raghunathpur+Godda+Jharkhand)
+[View OM Telecom on Google Maps]
 
 ## 📞 Contact
 
-- **Phone:** +91 79922 65174
-- **WhatsApp:** +91 79922 65174
+- **Phone:** +91 ***** *****
+- **WhatsApp:** +91 ***** *****
 - **Opening Hours:** Monday–Sunday, 9:00 AM – 8:00 PM
 
 ## ✨ Website Features
