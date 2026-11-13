@@ -109,4 +109,34 @@
  if(saved==='hi')setLanguage(true);
 })();
 </script>
+
+<script>
+/* Keep WhatsApp enquiry text in sync with the language selected on the website. */
+(()=>{
+ const phone='917992265174';
+ function messageFor(anchor, hindi){
+   let oldText='';
+   try{oldText=new URL(anchor.href).searchParams.get('text')||''}catch(e){}
+   if(!hindi)return oldText||'Hello OM Telecom, I would like to enquire about your services. Please assist me.';
+   if(/Budget Smartphone/i.test(oldText))return 'नमस्ते OM Telecom, कृपया मौजूदा बजट स्मार्टफोन मॉडल और उनकी कीमतों की जानकारी साझा करें।';
+   if(/Mid-Range Phone/i.test(oldText))return 'नमस्ते OM Telecom, कृपया मौजूदा मिड-रेंज फोन मॉडल और उनकी कीमतों की जानकारी साझा करें।';
+   if(/Performance Phone/i.test(oldText))return 'नमस्ते OM Telecom, कृपया मौजूदा परफॉर्मेंस फोन मॉडल और उनकी कीमतों की जानकारी साझा करें।';
+   if(/Latest Mobile Models/i.test(oldText))return 'नमस्ते OM Telecom, कृपया नए मोबाइल मॉडल, उनकी उपलब्धता और कीमतों की जानकारी साझा करें।';
+   const brand=oldText.match(/today’s\s+([A-Za-z0-9]+)\s+models/i);
+   if(brand)return 'नमस्ते OM Telecom, कृपया आज के '+brand[1]+' मोबाइल मॉडल, उपलब्धता और कीमतों की जानकारी साझा करें।';
+   if(/today’s stock and price/i.test(oldText))return 'नमस्ते OM Telecom, कृपया आज के स्टॉक और कीमतों की जानकारी साझा करें।';
+   if(/available mobile brands/i.test(oldText))return 'नमस्ते OM Telecom, कृपया उपलब्ध मोबाइल ब्रांड, मॉडल और कीमतों की जानकारी साझा करें।';
+   if(/today’s available/i.test(oldText))return 'नमस्ते OM Telecom, कृपया आज उपलब्ध मोबाइल मॉडल और उनकी कीमतों की जानकारी साझा करें।';
+   return 'नमस्ते OM Telecom, मुझे आपकी मोबाइल और डिजिटल सेवाओं के बारे में जानकारी चाहिए। कृपया सहायता करें।';
+ }
+ document.addEventListener('click',event=>{
+   const anchor=event.target.closest('a[href*="wa.me/"]');
+   if(!anchor)return;
+   const hindi=document.documentElement.lang==='hi' || (()=>{try{return localStorage.getItem('om-telecom-language')==='hi'}catch(e){return false}})();
+   const url=new URL('https://wa.me/'+phone);
+   url.searchParams.set('text',messageFor(anchor,hindi));
+   anchor.href=url.toString();
+ },true);
+})();
+</script>
 </body></html>
